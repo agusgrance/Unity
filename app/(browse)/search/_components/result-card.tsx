@@ -1,13 +1,20 @@
 import React from "react";
 import Thumbnail, { ThumbnailSkeleton } from "@/components/thumbnail";
 import VerifiedMark from "@/components/verified-mark";
-import { Stream, User } from "@prisma/client";
+import { User } from "@prisma/client";
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface Props {
-  data: Stream & { user: User };
+  data: {
+    id: string;
+    name: string;
+    thumbnailUrl: string | null;
+    isLive: boolean;
+    updatedAt: Date;
+    user: User;
+  };
 }
 const ResultCard = ({ data }: Props) => {
   return (

@@ -40,8 +40,13 @@ export const getSearch = async (term?: string) => {
           },
         ],
       },
-      include: {
+      select: {
         user: true,
+        id:true,
+        isLive: true,
+        name: true,
+        thumbnailUrl: true,
+        updatedAt: true,
       },
       orderBy: [
         {
