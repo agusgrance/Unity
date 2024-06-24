@@ -1,4 +1,4 @@
-import Thumbnail, { ThumbnailSkeleton } from "@/components/thumbnail";
+import Thumbnail, { ThumbnailSkeleton } from "@/components/ui/thumbnail";
 import LiveBadge from "@/components/ui/liveBadge";
 import { Skeleton } from "@/components/ui/skeleton";
 import UserAvatar, { UserAvatarSkeleton } from "@/components/ui/userAvatar";

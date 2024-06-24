@@ -1,9 +1,9 @@
 import { getSelfByUsername } from "@/lib/auth-service";
 import { redirect } from "next/navigation";
 import React from "react";
-import NavBar from "./_components/Navbar";
-import Sidebar from "./_components/Sidebar";
-import Container from "./_components/Container";
+import NavBar from "../../../../components/dashboard/navbar";
+import Sidebar from "../../../../components/dashboard/sidebar";
+import Container from "../../../../components/dashboard/container";
 
 interface Props {
   params: { username: string };

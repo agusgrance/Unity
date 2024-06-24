@@ -1,4 +1,4 @@
-import { StreamPlayerSkeleton } from "@/components/stream-player";
+import { StreamPlayerSkeleton } from "@/components/streamPlayer";
 import React from "react";
 
 const CreatorLoading = () => {

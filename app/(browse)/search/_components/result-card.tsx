@@ -1,6 +1,6 @@
 import React from "react";
-import Thumbnail, { ThumbnailSkeleton } from "@/components/thumbnail";
-import VerifiedMark from "@/components/verified-mark";
+import Thumbnail, { ThumbnailSkeleton } from "@/components/ui/thumbnail";
+import VerifiedMark from "@/components/ui/verifiedMark";
 import { User } from "@prisma/client";
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";

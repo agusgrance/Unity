@@ -4,7 +4,7 @@ import { getUserByUsername } from "@/lib/user-service";
 import { notFound } from "next/navigation";
 import Actions from "./_components/Actions";
 import { isBlockedByUser } from "@/lib/block-service";
-import StreamPlayer from "@/components/stream-player";
+import StreamPlayer from "@/components/streamPlayer";
 
 interface Props {
   params: { username: string };
