@@ -1,7 +1,11 @@
+// React
 import React from "react";
+
+// Next
 import Image from "next/image";
 import Link from "next/link";
 
+// Assets
 import LogoImg from "@/assets/img/logo.png";
 import LogoIcon from "@/assets/img/logoIcon.png";
 

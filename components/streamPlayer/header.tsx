@@ -1,13 +1,18 @@
+// React
 import React from "react";
+
+// Components
 import UserAvatar, { UserAvatarSkeleton } from "@/components/ui/userAvatar";
-import VerifiedMark from "../ui/verifiedMark";
+import VerifiedMark from "@/components/ui/verifiedMark";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   useParticipants,
   useRemoteParticipant,
 } from "@livekit/components-react";
-import { UserIcon } from "lucide-react";
 import Actions, { ActionsSkeleton } from "./actions";
-import { Skeleton } from "../ui/skeleton";
+
+// Assets
+import { UserIcon } from "lucide-react";
 
 interface Props {
   hostName: string;

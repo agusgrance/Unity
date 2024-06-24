@@ -1,8 +1,12 @@
 "use client";
+
+// React
 import React, { useState } from "react";
+
+// Components
 import { Input } from "@/components/ui/input";
-import CopyButton from "../copyButton";
 import { Button } from "@/components/ui/button";
+import CopyButton from "@/components/dashboard/copyButton";
 
 interface Props {
   value: string | null;

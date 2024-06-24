@@ -1,9 +1,16 @@
-import { getSelfByUsername } from "@/lib/auth-service";
-import { redirect } from "next/navigation";
+// React
 import React from "react";
-import NavBar from "../../../../components/dashboard/navbar";
-import Sidebar from "../../../../components/dashboard/sidebar";
-import Container from "../../../../components/dashboard/container";
+
+// Next
+import { redirect } from "next/navigation";
+
+// Services
+import { getSelfByUsername } from "@/lib/auth-service";
+
+// Components
+import NavBar from "@/components/dashboard/navbar";
+import Sidebar from "@/components/dashboard/sidebar";
+import Container from "@/components/dashboard/container";
 
 interface Props {
   params: { username: string };

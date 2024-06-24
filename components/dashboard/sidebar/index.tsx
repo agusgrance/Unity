@@ -1,4 +1,7 @@
+// React
 import React from "react";
+
+// Components
 import Wrapper from "../wrapper";
 import Toggle from "../toggle";
 import Navigation from "../navigation";

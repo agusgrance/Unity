@@ -1,4 +1,7 @@
+// React
 import React from "react";
+
+// Assets
 import { Loader } from "lucide-react";
 
 interface Props {

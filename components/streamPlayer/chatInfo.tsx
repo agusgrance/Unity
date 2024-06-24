@@ -1,5 +1,10 @@
+// React
 import React, { useMemo } from "react";
+
+// Components
 import Hint from "../ui/hint";
+
+// Assets
 import { Info } from "lucide-react";
 
 interface Props {

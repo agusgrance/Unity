@@ -1,10 +1,19 @@
 "use client";
+
+// React
 import React from "react";
 
-import { useUser } from "@clerk/nextjs";
+// Next
 import { usePathname } from "next/navigation";
-import { Fullscreen, KeyRound, MessageSquare, Users } from "lucide-react";
+
+// Clerk
+import { useUser } from "@clerk/nextjs";
+
+// Components
 import NavItem, { NavItemSkeleton } from "../navItem";
+
+// Assets
+import { Fullscreen, KeyRound, MessageSquare, Users } from "lucide-react";
 
 const Navigation = () => {
   const pathname = usePathname();

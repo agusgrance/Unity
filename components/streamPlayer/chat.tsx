@@ -1,7 +1,15 @@
 "use client";
+
+// React
 import React, { useEffect, useMemo, useState } from "react";
+
+// Hooks
 import { useMediaQuery } from "usehooks-ts";
+
+// Store
 import { ChatVariant, useChatSideBar } from "@/store/use-chat-sidebar";
+
+// Components
 import {
   useChat,
   useConnectionState,

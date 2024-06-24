@@ -1,7 +1,13 @@
+// React
 import React from "react";
 
+// Services
 import { getUserByUsername } from "@/lib/user-service";
+
+// Clerk
 import { currentUser } from "@clerk/nextjs/server";
+
+// Components
 import StreamPlayer from "@/components/streamPlayer";
 
 interface Props {

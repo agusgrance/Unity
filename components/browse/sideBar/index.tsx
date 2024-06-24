@@ -1,10 +1,13 @@
+// React
 import React from "react";
 
+// Components
 import Wrapper from "./wrapper";
 import Toggle, { ToggleSkeleton } from "./toggle";
 import Recommended, { RecommendedSkeleton } from "./recommended";
 import Following, { FollowingSkeleton } from "./following";
 
+// Services
 import { getRecommended } from "@/lib/recommended-service";
 import { getFollowedUsers } from "@/lib/follow-service";
 

@@ -1,11 +1,19 @@
 "use client";
+
+// React
 import React from "react";
 
+// Hooks
 import { useViewerToken } from "@/hooks/use-viewer-token";
-import { LiveKitRoom } from "@livekit/components-react";
+
+// Store
 import { useChatSideBar } from "@/store/use-chat-sidebar";
+
+// Utils
 import { cn } from "@/lib/utils";
 
+// Components
+import { LiveKitRoom } from "@livekit/components-react";
 import Video, { VideoSkeleton } from "./video";
 import Chat, { ChatSkeleton } from "./chat";
 import ChatToggle from "./chatToggle";

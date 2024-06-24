@@ -1,11 +1,18 @@
 "use client";
 
+// React
+import React from "react";
+
+// Store
+import { useSideBar } from "@/store/use-sidebar";
+
+// Components
 import Hint from "@/components/ui/hint";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useSideBar } from "@/store/use-sidebar";
+
+// Assets
 import { ArrowLeftFromLine, ArrowRightFromLine } from "lucide-react";
-import React from "react";
 
 const Toggle = () => {
   const { collapsed, onExpand, onCollapse } = useSideBar();

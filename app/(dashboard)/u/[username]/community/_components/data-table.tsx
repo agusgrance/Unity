@@ -1,5 +1,8 @@
 "use client";
+// React
+import React from "react";
 
+// Tanstack
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -12,6 +15,7 @@ import {
   getPaginationRowModel,
 } from "@tanstack/react-table";
 
+// Components
 import {
   Table,
   TableBody,
@@ -21,7 +25,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import React from "react";
 import { Input } from "@/components/ui/input";
 
 interface DataTableProps<TData, TValue> {

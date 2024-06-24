@@ -1,10 +1,15 @@
 "use client";
 
+// Components
 import { Button } from "@/components/ui/button";
 import UserAvatar from "@/components/ui/userAvatar";
-import { ColumnDef } from "@tanstack/react-table";
-import { ArrowUpDown } from "lucide-react";
 import UnblockButton from "./unblock-button";
+
+// Assets
+import { ArrowUpDown } from "lucide-react";
+
+// Types
+import { ColumnDef } from "@tanstack/react-table";
 
 export type BlockedUser = {
   id: string;

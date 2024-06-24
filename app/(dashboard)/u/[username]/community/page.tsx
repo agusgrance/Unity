@@ -1,6 +1,11 @@
+// React
 import React from "react";
+
+// Components
 import { columns } from "./_components/columns";
 import { DataTable } from "./_components/data-table";
+
+// Services
 import { getBlockedUsers } from "@/lib/block-service";
 import { format } from "date-fns";
 

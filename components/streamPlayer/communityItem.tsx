@@ -1,12 +1,19 @@
-import { cn, stringToColor } from "@/lib/utils";
-import { hostname } from "os";
+// React
 import React, { useTransition } from "react";
-import Hint from "../ui/hint";
-import { Button } from "../ui/button";
-import { MinusCircle } from "lucide-react";
-import { Participant } from "livekit-client";
+
+// Actions
 import { onBlock } from "@/actions/block";
+
+// Utils
+import { cn, stringToColor } from "@/lib/utils";
+
+// Components
+import Hint from "@/components/ui/hint";
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+
+// Assets
+import { MinusCircle } from "lucide-react";
 
 interface Props {
   hostName: string;

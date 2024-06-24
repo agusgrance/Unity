@@ -1,6 +1,9 @@
+// React
+import React, { useTransition } from "react";
+
+// Components
 import { onUnblock } from "@/actions/block";
 import { Button } from "@/components/ui/button";
-import React, { useTransition } from "react";
 import { toast } from "sonner";
 
 interface Props {

@@ -1,9 +1,15 @@
 "use client";
-
+// React
 import React from "react";
+
+// Store
 import { useSideBar } from "@/store/use-sidebar";
-import { User } from "@prisma/client";
+
+// Components
 import UserItem, { UserItemSkeleton } from "./userItem";
+
+// Types
+import { User } from "@prisma/client";
 
 interface Props {
   data: (User & {

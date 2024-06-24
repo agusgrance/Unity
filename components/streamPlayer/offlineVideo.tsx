@@ -1,5 +1,8 @@
-import { WifiOff } from "lucide-react";
+// React
 import React from "react";
+
+// Assets
+import { WifiOff } from "lucide-react";
 
 interface Props {
   username: string;

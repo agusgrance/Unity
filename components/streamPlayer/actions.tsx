@@ -1,13 +1,25 @@
 "use client";
+
+// React
 import React, { useTransition } from "react";
+
+// Next
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { useAuth } from "@clerk/nextjs";
-import { Heart } from "lucide-react";
+
+// Services
 import { cn } from "@/lib/utils";
+
+// Actions
 import { onFollow, onUnFollow } from "@/actions/follow";
+
+// Components
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
-import { Skeleton } from "../ui/skeleton";
+
+// Assets
+import { Heart } from "lucide-react";
 
 interface Props {
   hostIdentity: string;

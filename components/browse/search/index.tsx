@@ -1,13 +1,20 @@
 "use client";
 
+// React
 import React, { useState } from "react";
 
-import qs from "query-string";
-import { SearchIcon, X } from "lucide-react";
+// Next
 import { useRouter } from "next/navigation";
 
+// Services
+import qs from "query-string";
+
+// Components
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
+// Assets
+import { SearchIcon, X } from "lucide-react";
 
 const Search = () => {
   const router = useRouter();

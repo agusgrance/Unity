@@ -1,10 +1,15 @@
-import Thumbnail, { ThumbnailSkeleton } from "@/components/ui/thumbnail";
-import LiveBadge from "@/components/ui/liveBadge";
-import { Skeleton } from "@/components/ui/skeleton";
-import UserAvatar, { UserAvatarSkeleton } from "@/components/ui/userAvatar";
-import { User } from "@prisma/client";
-import Link from "next/link";
+// React
 import React from "react";
+// Next
+import Link from "next/link";
+
+// Components
+import Thumbnail, { ThumbnailSkeleton } from "@/components/ui/thumbnail";
+import UserAvatar, { UserAvatarSkeleton } from "@/components/ui/userAvatar";
+import { Skeleton } from "@/components/ui/skeleton";
+
+// types
+import { User } from "@prisma/client";
 
 interface Props {
   data: {

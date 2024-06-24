@@ -1,6 +1,9 @@
 "use client";
+
+// React
 import React, { useState, useTransition, useRef, ElementRef } from "react";
 
+// Components
 import {
   Dialog,
   DialogClose,
@@ -9,11 +12,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
 import { Button } from "@/components/ui/button";
-import { Textarea } from "../ui/textarea";
-import { updateUser } from "@/actions/user";
+import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+
+// Actions
+import { updateUser } from "@/actions/user";
 
 interface Props {
   initialValue: string | null;

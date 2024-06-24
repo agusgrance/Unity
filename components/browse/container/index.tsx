@@ -1,9 +1,15 @@
 "use client";
 
+//React
 import React, { useEffect } from "react";
+
+// Hooks
 import { useMediaQuery } from "usehooks-ts";
 
+// Services
 import { cn } from "@/lib/utils";
+
+// Store
 import { useSideBar } from "@/store/use-sidebar";
 
 interface Props {

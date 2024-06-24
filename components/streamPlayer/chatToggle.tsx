@@ -1,9 +1,17 @@
 "use client";
-import { useChatSideBar } from "@/store/use-chat-sidebar";
-import { ArrowLeftFromLine, ArrowRightFromLine } from "lucide-react";
+
+// React
 import React from "react";
-import Hint from "../ui/hint";
-import { Button } from "../ui/button";
+
+// Store
+import { useChatSideBar } from "@/store/use-chat-sidebar";
+
+// Components
+import Hint from "@/components/ui/hint";
+import { Button } from "@/components/ui/button";
+
+// Assets
+import { ArrowLeftFromLine, ArrowRightFromLine } from "lucide-react";
 
 const ChatToggle = () => {
   const { collapsed, onExpand, onCollapse } = useChatSideBar();

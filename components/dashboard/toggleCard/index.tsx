@@ -1,11 +1,17 @@
 "use client";
 
+// React
+import React, { useTransition } from "react";
+
+// Actions
 import { updateStream } from "@/actions/stream";
+
+// Components
 import { Skeleton } from "@/components/ui/skeleton";
 import { Switch } from "@/components/ui/switch";
-import React, { useTransition } from "react";
 import { toast } from "sonner";
 
+// Types
 type FieldTypes = "isChatEnabled" | "isChatDelayed" | "isChatFollowersOnly";
 
 interface Props {

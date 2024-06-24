@@ -1,9 +1,15 @@
+// React
 import React from "react";
+
+// Next
+import { notFound } from "next/navigation";
+
+// Services
 import { isFollowingUser } from "@/lib/follow-service";
 import { getUserByUsername } from "@/lib/user-service";
-import { notFound } from "next/navigation";
-import Actions from "./_components/Actions";
 import { isBlockedByUser } from "@/lib/block-service";
+
+// Components
 import StreamPlayer from "@/components/streamPlayer";
 
 interface Props {

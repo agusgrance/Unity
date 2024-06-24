@@ -1,9 +1,17 @@
+// React
 import React from "react";
 
+// Link
 import Link from "next/link";
+
+// Clerk
 import { SignInButton, UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
+
+// Components
 import { Button } from "@/components/ui/button";
+
+// Assets
 import { Clapperboard } from "lucide-react";
 
 const Actions = async () => {

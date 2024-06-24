@@ -1,4 +1,7 @@
+// React
 import { Suspense } from "react";
+
+// Components
 import Results, { ResultsSkeleton } from "./_components/results";
 
 export default function Home() {

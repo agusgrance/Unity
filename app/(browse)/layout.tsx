@@ -1,4 +1,7 @@
+// React
 import { Suspense } from "react";
+
+// Components
 import Container from "@/components/browse/container";
 import NavBar from "@/components/browse/navbar";
 import SideBar, { SideBarSkeleton } from "@/components/browse/sideBar";

@@ -1,10 +1,14 @@
+// React
 import React from "react";
 
-import UrlCard from "../../../../../components/dashboard/urlCard";
+// Components
+import UrlCard from "@/components/dashboard/urlCard";
+import KeyCard from "@/components/dashboard/keyCard";
+import ConnectModel from "@/components/dashboard/connectModel";
+
+// Services
 import { getSelf } from "@/lib/auth-service";
 import { getStreamByUserId } from "@/lib/stream-service";
-import KeyCard from "../../../../../components/dashboard/keyCard";
-import ConnectModel from "../../../../../components/dashboard/connectModel";
 
 const KeysPage = async () => {
   const self = await getSelf();

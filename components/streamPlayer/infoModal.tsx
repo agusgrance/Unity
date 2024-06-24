@@ -1,7 +1,13 @@
 "use client";
-import React, { useState, useTransition, useRef, ElementRef } from "react";
-import { useRouter } from "next/navigation";
 
+// React
+import React, { useState, useTransition, useRef, ElementRef } from "react";
+
+// Next
+import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+// Components
 import {
   Dialog,
   DialogClose,
@@ -10,17 +16,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { updateStream } from "@/actions/stream";
 import { toast } from "sonner";
+import Hint from "@/components/ui/hint";
 
+// lib
 import { UploadDropzone } from "@/lib/uploadthing";
-import Hint from "../ui/hint";
+
+// Assets
 import { Trash } from "lucide-react";
-import Image from "next/image";
 
 interface Props {
   initialName: string;

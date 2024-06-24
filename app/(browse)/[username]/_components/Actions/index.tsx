@@ -1,15 +1,21 @@
 "use client";
 
+// React
 import React, { useTransition } from "react";
-import { Button } from "@/components/ui/button";
+
+// Actions
+import { onUnblock } from "@/actions/block";
 import { onFollow, onUnFollow } from "@/actions/follow";
+
+// Components
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { onBlock, onUnblock } from "@/actions/block";
 
 interface Props {
   isFollowing?: boolean;
   userId: string;
 }
+
 const Actions = ({ isFollowing, userId }: Props) => {
   const [isPending, startTransition] = useTransition();
 

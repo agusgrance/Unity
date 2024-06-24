@@ -1,6 +1,9 @@
+// React
 import React from "react";
+
+//Components
 import { Skeleton } from "@/components/ui/skeleton";
-import { ToggleCardSkeleton } from "../../../../../components/dashboard/toggleCard";
+import { ToggleCardSkeleton } from "@/components/dashboard/toggleCard";
 
 const ChatLoading = () => {
   return (

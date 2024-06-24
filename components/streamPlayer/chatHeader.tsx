@@ -1,5 +1,7 @@
+// React
 import React from "react";
 
+// Components
 import { Skeleton } from "@/components/ui/skeleton";
 import ChatToggle from "./chatToggle";
 import VariantToggle from "./variantToggle";

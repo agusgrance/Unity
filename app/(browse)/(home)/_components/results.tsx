@@ -1,5 +1,10 @@
-import { getStreams } from "@/lib/feed-service";
+// React
 import React from "react";
+
+// lib
+import { getStreams } from "@/lib/feed-service";
+
+// components
 import ResultCard, { ResultCardSkeleton } from "./result-card";
 import { Skeleton } from "@/components/ui/skeleton";
 

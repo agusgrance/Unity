@@ -1,9 +1,14 @@
+// React
 import React, { useState } from "react";
-import { Input } from "../ui/input";
-import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
-import { Skeleton } from "../ui/skeleton";
+
+// Components
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 import ChatInfo from "./chatInfo";
+
+// Services
+import { cn } from "@/lib/utils";
 
 interface Props {
   onSubmit: () => void;

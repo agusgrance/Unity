@@ -1,9 +1,14 @@
 "use client";
+
+// React
+import React from "react";
+
+// Services
 import { format } from "date-fns";
 import { stringToColor } from "@/lib/utils";
+
+// Livekit
 import { ReceivedChatMessage } from "@livekit/components-react";
-import React from "react";
-import { Skeleton } from "../ui/skeleton";
 
 interface Props {
   data: ReceivedChatMessage;

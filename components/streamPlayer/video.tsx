@@ -1,16 +1,21 @@
 "use client";
+
+// React
 import React from "react";
 
+// Livekit
 import { ConnectionState, Track } from "livekit-client";
 import {
   useConnectionState,
   useRemoteParticipant,
   useTracks,
 } from "@livekit/components-react";
+
+// Components
+import { Skeleton } from "@/components/ui/skeleton";
 import OfflineVideo from "./offlineVideo";
 import LoadingVideo from "./loadingVideo";
 import LiveVideo from "./liveVideo";
-import { Skeleton } from "../ui/skeleton";
 
 interface Props {
   hostName: string;

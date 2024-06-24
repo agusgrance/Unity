@@ -1,6 +1,12 @@
 "use client";
+
+// React
 import React, { useState } from "react";
+
+// Components
 import { Button } from "@/components/ui/button";
+
+// Assets
 import { CheckCheck, CopyIcon } from "lucide-react";
 
 interface Props {

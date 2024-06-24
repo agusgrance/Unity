@@ -1,6 +1,10 @@
 "use client";
+
+// React
 import React from "react";
-import VerifiedMark from "../ui/verifiedMark";
+
+// components
+import VerifiedMark from "@/components/ui/verifiedMark";
 import BioModal from "./bioModal";
 
 interface Props {

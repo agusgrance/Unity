@@ -1,8 +1,13 @@
 "use client";
-import React from "react";
-import { Maximize, Minimize } from "lucide-react";
 
+// React
+import React from "react";
+
+// Components
 import Hint from "@/components/ui/hint";
+
+// Assets
+import { Maximize, Minimize } from "lucide-react";
 
 interface Props {
   isFullScreen: boolean;

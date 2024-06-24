@@ -1,7 +1,13 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+
+// React
 import React from "react";
+
+// Next
+import Link from "next/link";
+
+// Components
+import { Button } from "@/components/ui/button";
 
 const ErrorPage = () => {
   return (

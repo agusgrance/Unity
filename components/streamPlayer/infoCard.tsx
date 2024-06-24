@@ -1,9 +1,17 @@
 "use client";
-import { Pencil } from "lucide-react";
+
+// React
 import React from "react";
-import { Separator } from "../ui/separator";
+
+// Next
 import Image from "next/image";
+
+// Components
+import { Separator } from "@/components/ui/separator";
 import InfoModal from "./infoModal";
+
+// Assets
+import { Pencil } from "lucide-react";
 
 interface Props {
   hostIdentity: string;

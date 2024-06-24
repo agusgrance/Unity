@@ -1,9 +1,16 @@
-import { useParticipants } from "@livekit/components-react";
+// React
 import React, { useMemo, useState } from "react";
+
+// Hooks
 import { useDebounceValue } from "usehooks-ts";
-import { Input } from "../ui/input";
-import { ScrollArea } from "../ui/scrollArea";
+
+// Components
+import { useParticipants } from "@livekit/components-react";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scrollArea";
 import CommunityItem from "./communityItem";
+
+// Types
 import { LocalParticipant, RemoteParticipant } from "livekit-client";
 
 interface Props {

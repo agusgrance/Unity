@@ -1,5 +1,8 @@
-import { Input } from "@/components/ui/input";
+// React
 import React from "react";
+
+// Components
+import { Input } from "@/components/ui/input";
 import CopyButton from "../copyButton";
 
 interface Props {

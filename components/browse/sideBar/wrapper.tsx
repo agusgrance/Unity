@@ -1,10 +1,18 @@
 "use client";
 
+// React
 import React from "react";
+
+// Hooks
 import { useIsClient } from "usehooks-ts";
 
+// Store
 import { useSideBar } from "@/store/use-sidebar";
+
+// Services
 import { cn } from "@/lib/utils";
+
+// Components
 import { ToggleSkeleton } from "./toggle";
 import { RecommendedSkeleton } from "./recommended";
 import { FollowingSkeleton } from "./following";

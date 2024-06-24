@@ -1,4 +1,7 @@
+// React
 import React from "react";
+
+// Components
 import Logo from "../logo";
 import Actions from "../actions";
 
