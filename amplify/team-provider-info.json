@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-unity-dev-2845d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::343928117907:role/amplify-unity-dev-2845d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::343928117907:role/amplify-unity-dev-2845d-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-unity-dev-2845d-deployment",
+      "UnauthRoleName": "amplify-unity-dev-2845d-unauthRole",
+      "StackName": "amplify-unity-dev-2845d",
+      "StackId": "arn:aws:cloudformation:us-east-2:343928117907:stack/amplify-unity-dev-2845d/46858760-34d1-11ef-b459-0aeaf1c7308d",
+      "AmplifyAppId": "dvc8a0s0ususr"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dvc8a0s0ususr",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
