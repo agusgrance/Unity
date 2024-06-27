@@ -44,7 +44,7 @@ const AboutCard = ({
           {followedByLabel}
         </div>
         <p>
-          {bio || "This user prefers to kee[ an air of mystery about them."}
+          {bio || "This user prefers to keep an air of mystery about them."}
         </p>
       </div>
     </div>
