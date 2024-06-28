@@ -1,8 +1,6 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
-
 import { ThemeProvider } from "@/components/ui/themeProvider";
-
 import "./globals.css";
 import { Toaster } from "sonner";
 
@@ -12,9 +10,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider appearance={{ baseTheme: dark }}>
-      <html lang="en">
-        <body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ClerkProvider appearance={{ baseTheme: dark }}>
           <ThemeProvider
             attribute="class"
             forcedTheme="dark"
@@ -23,8 +21,8 @@ export default function RootLayout({
             <Toaster theme="light" position="bottom-center" />
             {children}
           </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }
