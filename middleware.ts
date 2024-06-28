@@ -5,5 +5,5 @@ export default clerkMiddleware()
 export const config = {
   // The following matcher runs middleware on all routes
   // except static assets.
-  matcher: [ '/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)', '/((?!api|_next/static|_next/image|.*\\.png$).*)'],
+  matcher: [ '/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
 };
