@@ -53,12 +53,27 @@ export async function POST(req: Request) {
       });
     }
 
-    // Do something with the payload
     const eventType = evt.type;
     console.log(`Processing webhook event: ${eventType}`);
 
     if (eventType === "user.created") {
       try {
+        try {
+          await db.$queryRaw`SELECT 1`;
+          console.log("Database connection is working for user.created");
+        } catch (dbError) {
+          console.error("Database connection error in user.created:", dbError);
+          return new Response(JSON.stringify({
+            error: "Database connection error",
+            details: dbError instanceof Error ? dbError.message : String(dbError)
+          }), {
+            status: 500,
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
+        }
+
         // Check if user already exists
         const existingUser = await db.user.findUnique({
           where: {
@@ -87,14 +102,37 @@ export async function POST(req: Request) {
         }
       } catch (error) {
         console.error(`Error processing user.created event:`, error);
-        return new Response(JSON.stringify({ error: "Error processing user creation" }), {
+        return new Response(JSON.stringify({
+          error: "Error processing user creation",
+          details: error instanceof Error ? error.message : String(error),
+          stack: error instanceof Error ? error.stack : undefined
+        }), {
           status: 500,
+          headers: {
+            "Content-Type": "application/json"
+          }
         });
       }
     }
 
     if (eventType === "user.updated") {
       try {
+        try {
+          await db.$queryRaw`SELECT 1`;
+          console.log("Database connection is working for user.updated");
+        } catch (dbError) {
+          console.error("Database connection error in user.updated:", dbError);
+          return new Response(JSON.stringify({
+            error: "Database connection error",
+            details: dbError instanceof Error ? dbError.message : String(dbError)
+          }), {
+            status: 500,
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
+        }
+
         const currentUser = await db.user.findUnique({
           where: {
             externalUserId: payload.data.id,
@@ -103,7 +141,12 @@ export async function POST(req: Request) {
 
         if (!currentUser) {
           console.log(`User not found for update: ${payload.data.id}`);
-          return new Response("User Not Found", { status: 404 });
+          return new Response(JSON.stringify({ message: "User Not Found" }), {
+            status: 404,
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
         }
 
         console.log(`Updating user: ${payload.data.id}`);
@@ -119,8 +162,15 @@ export async function POST(req: Request) {
         console.log(`User updated successfully: ${payload.data.id}`);
       } catch (error) {
         console.error(`Error processing user.updated event:`, error);
-        return new Response(JSON.stringify({ error: "Error processing user update" }), {
+        return new Response(JSON.stringify({
+          error: "Error processing user update",
+          details: error instanceof Error ? error.message : String(error),
+          stack: error instanceof Error ? error.stack : undefined
+        }), {
           status: 500,
+          headers: {
+            "Content-Type": "application/json"
+          }
         });
       }
     }
@@ -128,8 +178,49 @@ export async function POST(req: Request) {
     if (eventType === "user.deleted") {
       try {
         console.log(`Deleting user: ${payload.data.id}`);
-        await resetIngresses(payload.data.id);
 
+        // Verificar la conexión a la base de datos antes de realizar operaciones
+        try {
+          // Ejecutar una consulta simple para verificar la conexión
+          await db.$queryRaw`SELECT 1`;
+          console.log("Database connection is working");
+        } catch (dbError) {
+          console.error("Database connection error:", dbError);
+          return new Response(JSON.stringify({
+            error: "Database connection error",
+            details: dbError instanceof Error ? dbError.message : String(dbError)
+          }), {
+            status: 500,
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
+        }
+
+        const userToDelete = await db.user.findUnique({
+          where: {
+            externalUserId: payload.data.id,
+          },
+        });
+
+        if (!userToDelete) {
+          console.log(`User with externalUserId ${payload.data.id} not found for deletion. Skipping.`);
+          return new Response(JSON.stringify({ message: "User not found, nothing to delete" }), {
+            status: 200,
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
+        }
+
+        try {
+          await resetIngresses(payload.data.id);
+          console.log(`Ingresses reset successfully for user: ${payload.data.id}`);
+        } catch (ingressError) {
+          console.error(`Error resetting ingresses:`, ingressError);
+        }
+
+        // Eliminar el usuario
         await db.user.delete({
           where: {
             externalUserId: payload.data.id,
@@ -138,8 +229,16 @@ export async function POST(req: Request) {
         console.log(`User deleted successfully: ${payload.data.id}`);
       } catch (error) {
         console.error(`Error processing user.deleted event:`, error);
-        return new Response(JSON.stringify({ error: "Error processing user deletion" }), {
+        // Incluir más detalles sobre el error
+        return new Response(JSON.stringify({
+          error: "Error processing user deletion",
+          details: error instanceof Error ? error.message : String(error),
+          stack: error instanceof Error ? error.stack : undefined
+        }), {
           status: 500,
+          headers: {
+            "Content-Type": "application/json"
+          }
         });
       }
     }
